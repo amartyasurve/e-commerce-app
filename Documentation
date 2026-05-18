@@ -70,22 +70,35 @@
 #│  exact queries       │  │  & analytics         │
 #└──────────────────────┘  └──────────────────────┘
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+┌─────────────────────────────────────────────────────────────┐
+│                 API ENDPOINT MAPPING                        │
+├─────────────────────────────────────────────────────────────┤
+│ GET /categories                                             │
+│ └─> Returns: List<String> of all unique categories          │
+│     Executes: findAllCategories() from MySQL                │
+│                                                              │
+│ GET /products                                               │
+│ └─> Returns: List<Product> - all products (paginated ideal) │
+│     Executes: findAll() from MySQL                           │
+│                                                              │
+│ GET /products/{id}                                          │
+│ └─> Returns: Optional<Product> by exact ID                  │
+│     Executes: findById(id) from MySQL                        │
+│                                                              │
+│ GET /products?category=electronics                          │
+│ └─> Returns: Filtered products by category                  │
+│     Executes: findByCategory(category) from MySQL           │
+│     Note: Category filtering uses structured DB             │
+│                                                              │
+│ GET /products?query=smartphone                              │
+│ └─> Returns: Full-text search results                       │
+│     Executes: Elasticsearch query (title OR description)    │
+│     Maps back to Product entities for API response          │
+│                                                              │
+│ Priority Logic (in ProductController):                      │
+│ 1. If query param provided → Elasticsearch search           │
+│ 2. Else if category param provided → MySQL filter           │
+│ 3. Else → Return all products from MySQL                    │
+└─────────────────────────────────────────────────────────────┘
 
 

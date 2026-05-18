@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39432d9a-82bd-48d2-b3c8-1e9e1309dd3a" name="Changes" comment="project">
-      <change afterPath="$PROJECT_DIR$/Documentation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/DataIngestionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/InvalidSearchException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/ProductNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/ecommerce/controller/ProductControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/ecommerce/service/impl/ProductServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="39432d9a-82bd-48d2-b3c8-1e9e1309dd3a" name="Changes" comment="added exception handling">
+      <change beforePath="$PROJECT_DIR$/Documentation" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/DataIngestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/DataIngestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,12 +265,21 @@
       <option name="project" value="LOCAL" />
       <updated>1778874689630</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added exception handling">
+      <option name="closed" value="true" />
+      <created>1779104535088</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779104535088</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project" />
-    <option name="LAST_COMMIT_MESSAGE" value="project" />
+    <MESSAGE value="added exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added exception handling" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

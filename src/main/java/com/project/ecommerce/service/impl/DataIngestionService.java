@@ -10,6 +10,7 @@ import com.project.ecommerce.repository.elasticsearch.ProductSearchRepository;
 import com.project.ecommerce.repository.jpa.ProductRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -21,6 +22,7 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class DataIngestionService {
 
     private final ProductRepository productRepository;
@@ -39,7 +41,7 @@ public class DataIngestionService {
     public void initData() {
         // Skip data ingestion during test execution
         if (activeProfile != null && activeProfile.contains("test")) {
-            System.out.println("Test profile detected. Skipping data ingestion.");
+            log.debug("Test profile detected. Skipping data ingestion.");
             return;
         }
 
@@ -47,11 +49,11 @@ public class DataIngestionService {
             // Only ingest if DB is empty to prevent duplicates on restarts
             long productCount = productRepository.count();
             if (productCount > 0) {
-                System.out.println("Database already contains " + productCount + " products. Skipping data ingestion.");
+                log.info("Database already contains " + productCount + " products. Skipping data ingestion.");
                 return;
             }
 
-            System.out.println("Starting data ingestion from DummyJSON API...");
+            log.info("Starting data ingestion from DummyJSON API...");
             WebClient webClient = WebClient.create("https://dummyjson.com");
 
             ProductResponse response = webClient.get()
@@ -92,11 +94,11 @@ public class DataIngestionService {
                     productSearchRepository.save(doc);
                     successCount++;
                 } catch (Exception e) {
-                    System.err.println("Failed to ingest product with id: " + dto.id() + ". Error: " + e.getMessage());
+                    log.error("Failed to ingest product with id: " + dto.id() + ". Error: " + e.getMessage());
                 }
             }
 
-            System.out.println("Data ingestion completed. Successfully ingested " + successCount + "/" + totalProducts 
+            log.info("Data ingestion completed. Successfully ingested " + successCount + "/" + totalProducts
                     + " products into MySQL and Elasticsearch.");
 
             if (successCount == 0) {
@@ -104,11 +106,11 @@ public class DataIngestionService {
             }
 
         } catch (WebClientResponseException e) {
-            System.err.println("WebClient error during data ingestion. Status: " + e.getStatusCode() 
+            log.error("WebClient error during data ingestion. Status: " + e.getStatusCode()
                    + ", Message: " + e.getMessage());
             throw new DataIngestionException("Failed to fetch data from external API: " + e.getMessage(), e);
         } catch (Exception e) {
-            System.err.println("Unexpected error during data ingestion: " + e.getMessage());
+            log.error("Unexpected error during data ingestion: " + e.getMessage());
             throw new DataIngestionException("Data ingestion failed: " + e.getMessage(), e);
         }
     }
