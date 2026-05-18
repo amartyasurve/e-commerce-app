@@ -1,5 +1,6 @@
 package com.project.ecommerce.domain;
+import java.util.List;
 
 // --- DTO for DummyJSON Response using Java Records ---
-public record ProductResponse(java.util.List<ProductDto> products) {
+public record ProductResponse(List<ProductDto> products) {
 }

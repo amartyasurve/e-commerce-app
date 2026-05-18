@@ -4,24 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39432d9a-82bd-48d2-b3c8-1e9e1309dd3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/EcommerceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/repository/elasticsearch/ProductSearchRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/repository/jpa/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/DataIngestionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="39432d9a-82bd-48d2-b3c8-1e9e1309dd3a" name="Changes" comment="project">
+      <change afterPath="$PROJECT_DIR$/Documentation" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/DataIngestionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/InvalidSearchException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/exception/ProductNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/ecommerce/controller/ProductControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/ecommerce/service/impl/ProductServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/domain/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/DataIngestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/DataIngestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/ecommerce/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +29,50 @@
   <component name="CopilotChats">
     <option name="panelChat">
       <chat>
-        <option name="activeSessionId" value="4eccbb97-c14b-440a-a25a-8634424c9b7b" />
+        <option name="activeSessionId" value="e5f22370-d005-4463-947b-8d97d2237b91" />
         <option name="sessions">
           <session>
             <option name="chatType" value="PANEL" />
             <option name="id" value="4eccbb97-c14b-440a-a25a-8634424c9b7b" />
             <option name="modeId" value="Agent" />
+            <option name="modelProviderName" value="Gemini" />
+            <option name="modelType" value="byok_family" />
+            <option name="modelValue" value="models/gemini-2.5-pro" />
+            <option name="status" value="Stopped" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="87b9ae7d-1488-43e2-92f8-e15084ba957b" />
+            <option name="modeId" value="Agent" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="4f5f8d6f-2a44-4f8e-905b-f0b0ce96007a" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="6b9bbc52-9e7a-4333-a3d0-37e5d0a3924e" />
+            <option name="modeId" value="Agent" />
+            <option name="modelProviderName" value="Gemini" />
+            <option name="modelType" value="byok_family" />
+            <option name="modelValue" value="models/gemini-2.5-flash" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="e5f22370-d005-4463-947b-8d97d2237b91" />
+            <option name="modeId" value="Agent" />
+            <option name="modelProviderName" value="Gemini" />
+            <option name="modelType" value="byok_family" />
+            <option name="modelValue" value="models/gemini-2.5-flash" />
             <option name="targetType" value="LOCAL" />
           </session>
         </option>
@@ -51,6 +85,13 @@
       <entry key="_/Users/amartyasurve/Downloads/Learnings/e-commerce-app/e-commerce-app" value="3DlrNACohcR1yMgWZOl4pI90cZ6" />
     </persistenceIdMap>
   </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="inline" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -62,35 +103,78 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;amartyasurve&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/amartyasurve/e-commerce-app.git&quot;,
+    &quot;accountId&quot;: &quot;b29d7c1a-d349-4724-8755-b63717841e4b&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="3DlrNACohcR1yMgWZOl4pI90cZ6" />
+  <component name="ProjectSessionTemplates">
+    <option name="inlineTemplate">
+      <template>
+        <option name="modeId" value="InlineAgent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.EcommerceApplication.executor": "Run",
-    "Maven.e-commerce-app [clean,install].executor": "Run",
-    "Maven.e-commerce-app [clean].executor": "Run",
-    "Maven.e-commerce-app [install].executor": "Run",
-    "Maven.e-commerce-app [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/Users/amartyasurve/Downloads/Learnings/e-commerce-app/e-commerce-app/src/main/java/com/project/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.EcommerceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerIntegrationTest.testGetProducts_NoResultsForSearch.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.e-commerce-app [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.e-commerce-app [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.e-commerce-app [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.e-commerce-app [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/amartyasurve/Downloads/Learnings/e-commerce-app/e-commerce-app/src/main/java/com/project/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="JUnit.ProductControllerIntegrationTest.testGetProducts_NoResultsForSearch">
     <configuration name="EcommerceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="sapmachine-21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -106,8 +190,73 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductControllerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="e-commerce-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.ecommerce.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.ecommerce.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.ecommerce.controller.ProductControllerIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerIntegrationTest.testGetProducts_NoResultsForSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="e-commerce-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.ecommerce.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.ecommerce.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.ecommerce.controller.ProductControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetProducts_NoResultsForSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="e-commerce-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.ecommerce.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.ecommerce.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.project.ecommerce.controller.ProductControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="e-commerce-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.ecommerce.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.ecommerce.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.project.ecommerce.service.impl.ProductServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductControllerIntegrationTest.testGetProducts_NoResultsForSearch" />
+        <item itemvalue="JUnit.ProductControllerIntegrationTest" />
+        <item itemvalue="JUnit.ProductServiceImplTest" />
+        <item itemvalue="JUnit.ProductControllerTest" />
         <item itemvalue="Application.EcommerceApplication" />
       </list>
     </recent_temporary>
@@ -120,7 +269,20 @@
       <option name="presentableId" value="Default" />
       <updated>1778867458015</updated>
     </task>
+    <task id="LOCAL-00001" summary="project">
+      <option name="closed" value="true" />
+      <created>1778874689630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778874689630</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project" />
+    <option name="LAST_COMMIT_MESSAGE" value="project" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

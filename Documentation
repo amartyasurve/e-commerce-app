@@ -1,0 +1,91 @@
+#┌──────────────────────────────────────────────────────────┐
+#│                    REST Client (Frontend/Postman)        │
+#└────────────────────┬─────────────────────────────────────┘
+#                     │ HTTP Requests/Responses
+#                     ↓
+#┌──────────────────────────────────────────────────────────┐
+#│           PRESENTATION LAYER                             │
+#│  ┌─────────────────────────────────────────────────────┐ │
+#│  │  ProductController                                 │ │
+#│  │  • GET /products               (all products)      │ │
+#│  │  • GET /products?query=...     (full-text search)  │ │
+#│  │  • GET /products?category=...  (category filter)   │ │
+#│  │  • GET /products/{id}          (by ID)             │ │
+#│  │  • GET /categories             (all categories)    │ │
+#│  └─────────────────────────────────────────────────────┘ │
+#└──────────────────────┬──────────────────────────────────┘
+#                       │ Delegates to Service Layer
+#                       ↓
+#┌──────────────────────────────────────────────────────────┐
+#│           BUSINESS LOGIC LAYER                           │
+#│  ┌─────────────────────────────────────────────────────┐ │
+#│  │  ProductService (Interface)                         │ │
+#│  │  • getAllProducts()                                 │ │
+#│  │  • getProductById(id)                               │ │
+#│  │  • getProductsByCategory(category)                  │ │
+#│  │  • searchProducts(query)                            │ │
+#│  │  • getAllCategories()                               │ │
+#│  └─────────────────────────────────────────────────────┘ │
+#│  ┌─────────────────────────────────────────────────────┐ │
+#│  │  ProductServiceImpl (Implementation)                 │ │
+#│  │  Routes queries to appropriate Repository           │ │
+#│  └─────────────────────────────────────────────────────┘ │
+#│  ┌─────────────────────────────────────────────────────┐ │
+#│  │  DataIngestionService                               │ │
+#│  │  • Runs once on startup (@PostConstruct)            │ │
+#│  │  • Fetches data from external API (DummyJSON)       │ │
+#│  │  • Populates both MySQL and Elasticsearch           │ │
+#│  └─────────────────────────────────────────────────────┘ │
+#└──────────────────────┬──────────────────────────────────┘
+#                       │ Calls Repositories
+#          ┌────────────┴────────────┐
+#          ↓                         ↓
+#┌──────────────────────┐  ┌──────────────────────┐
+#│  PERSISTENCE LAYER   │  │ SEARCH/INDEX LAYER   │
+#│                      │  │                      │
+#│  ProductRepository   │  │ ProductSearchRepo    │
+#│  (JPA)               │  │ (Elasticsearch)      │
+#│                      │  │                      │
+#│ • findAll()          │  │ • findByTitleContaining
+#│ • findById()         │  │   OrDescriptionCont- │
+#│ • findByCategory()   │  │   aining(query)      │
+#│ • findAllCategories()│  │                      │
+#└──────────────────┬───┘  └──────────┬───────────┘
+#                   │                 │
+#                   ↓                 ↓
+#┌──────────────────────┐  ┌──────────────────────┐
+#│      MYSQL 8.0       │  │   ELASTICSEARCH 8.13 │
+#│                      │  │                      │
+#│  products table:     │  │  products index:     │
+#│  ├─ id (PK)          │  │  ├─ id               │
+#│  ├─ title            │  │  ├─ title (analyzed) │
+#│  ├─ description      │  │  ├─ description      │
+#│  ├─ price            │  │  │  (analyzed)       │
+#│  ├─ category         │  │  ├─ category         │
+#│  ├─ brand            │  │  │  (keyword)        │
+#│  └─ timestamps       │  │  └─ price            │
+#│                      │  │                      │
+#│  Purpose:            │  │  Purpose:            │
+#│  Structured &        │  │  Full-text search    │
+#│  exact queries       │  │  & analytics         │
+#└──────────────────────┘  └──────────────────────┘
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+
